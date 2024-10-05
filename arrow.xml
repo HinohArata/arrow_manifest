@@ -30,6 +30,9 @@
            review="https://review.arrowos.net/"
            revision="refs/heads/arrow-13.1" />
 
+  <!-- Remove -->
+  <remove-project name="platform/external/libcxx" />
+
   <!-- build repos -->
   <project path="build/make" name="android_build" groups="pdk" remote="arrow-f" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -46,7 +49,7 @@
 
   <project path="art" name="android_art" remote="arrow" />
   <project path="bionic" name="android_bionic" groups="pdk" remote="arrow-f" />
-  <project path="manifest" name="android_manifest" remote="arrow-fe" />
+  <project path="manifest" name="HinohArata/arrow_manifest" remote="github" revision="arrow-13.1_ext" />
 
   <!-- bootable repos -->
   <project path="bootable/recovery" name="android_bootable_recovery" remote="arrow" />
@@ -75,6 +78,7 @@
   <project path="external/selinux" name="android_external_selinux" remote="arrow" />
   <project path="external/tinycompress" name="android_external_tinycompress" remote="arrow" />
   <project path="external/tinyxml" name="android_external_tinyxml" remote="arrow" />
+  <project path="external/libcxx" name="LineageOS/android_external_libcxx" remote="github" revision="lineage-20.0"/>
 
   <!-- framework repos -->
   <project path="frameworks/av" name="android_frameworks_av" remote="arrow-f" />
